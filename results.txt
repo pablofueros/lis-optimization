@@ -1,0 +1,90 @@
+# PYTHON RECURSION 10<=N<=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/python_recursive.json"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 10"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 20"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 30"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 40"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 50"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 60"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 70"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 80"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 90"
+
+
+# RUST RECURSION DEBUG 10<=N<=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/rust_recursive_debug.json"  \
+  "rust-script -f rust/lis_recursive.rs 10"  \
+  "rust-script -f rust/lis_recursive.rs 20"  \
+  "rust-script -f rust/lis_recursive.rs 30"  \
+  "rust-script -f rust/lis_recursive.rs 40"  \
+  "rust-script -f rust/lis_recursive.rs 50"  \
+  "rust-script -f rust/lis_recursive.rs 60"  \
+  "rust-script -f rust/lis_recursive.rs 70"  \
+  "rust-script -f rust/lis_recursive.rs 80"  \
+  "rust-script -f rust/lis_recursive.rs 90"
+
+
+# RUST RECURSION RELEASE 10<=N<=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/rust_recursive_release.json"  \
+  "rust-script rust/lis_recursive.rs 10"  \
+  "rust-script rust/lis_recursive.rs 20"  \
+  "rust-script rust/lis_recursive.rs 30"  \
+  "rust-script rust/lis_recursive.rs 40"  \
+  "rust-script rust/lis_recursive.rs 50"  \
+  "rust-script rust/lis_recursive.rs 60"  \
+  "rust-script rust/lis_recursive.rs 70"  \
+  "rust-script rust/lis_recursive.rs 80"  \
+  "rust-script rust/lis_recursive.rs 90"
+
+
+# PYTHON RECURSION N=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/python_recursive_90.json"  \
+  "uv run --no-project --python=3.13 python/lis_recursive.py 90"
+
+
+# RUST RECURSION DEBUG N=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/rust_recursive_debug_90.json"  \
+  "rust-script -f rust/lis_recursive.rs 90"
+
+
+# RUST RECURSION RELEASE N=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/rust_recursive_release_90.json"  \
+  "rust-script rust/lis_recursive.rs 90"
+
+
+# PYTHON RECURSION 3.14 N=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/python_recursive_314_90.json"  \
+  "uv run --no-project --python=3.14 python/lis_recursive.py 90"
+
+
+# PYTHON RECURSION PyPy N=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/python_recursive_pypy_90.json"  \
+  "uv run --no-project --python=PyPy python/lis_recursive.py 90"
+
+
+# PYTHON RECURSION PyPy OPT 2 N=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/python_recursive_opt_90.json"  \
+  "uv run --no-project --python=PyPy python/lis_recursive_opt_2.py 90"
+
+
+# PYTHON RECURSION PyPy NP N=90
+hyperfine --shell=none --warmup=5 --min-runs=10  \
+  --export-json="results/python_recursive_np_90.json"  \
+  "uv run --no-project --python=PyPy python/lis_recursive_np.py 90"
+
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+# Project files
+data/
+results/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Marimo
+__marimo__
